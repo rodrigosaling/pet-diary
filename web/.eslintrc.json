@@ -11,10 +11,10 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb-base",
     "airbnb-typescript/base",
-    "prettier",
-    "eslint-config-prettier"
+    "eslint-config-prettier",
+    "prettier"
   ],
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint", "prettier"],
   "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
