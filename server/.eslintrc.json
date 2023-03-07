@@ -5,11 +5,13 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "airbnb-base",
     "airbnb-typescript/base",
+    "eslint-config-prettier",
     "prettier"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
