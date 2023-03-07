@@ -5,7 +5,8 @@
   "description": "A tag-based dairy for your pet.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test --workspaces"
+    "test": "npm run test --workspaces",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3"
   },
@@ -39,5 +42,14 @@
     "server",
     "web"
   ],
-  "dependencies": {}
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged":{
+    "**/*.{js,jsx,ts,tsx,json,md,css}":[
+      "prettier --write"
+    ]
+  }
 }
